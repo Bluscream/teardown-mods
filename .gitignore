@@ -44,3 +44,5 @@ luac.out
 !mods/
 mods/core
 mods/framework
+!mods/bluscream/
+@mods/bluscream/
