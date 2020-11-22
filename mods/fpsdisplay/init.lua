@@ -1,16 +1,17 @@
-function getFps()
+local function getFps()
     return math.floor(1/GetTimeStep())
 end
 
-local lastFPS = function()
+local last_fps = 0
+local function lastFPS()
     if lastTime == nil or (GetTime() - lastTime) >= 0.1 then
-        local lastTime = GetTime()
-        local last_fps = getFps()
+        lastTime = GetTime()
+        last_fps = getFps()
     end
     return last_fps
 end
 
-local drawHud = function()
+local function drawHud()
     UiPush()
       UiAlign("left")
       UiColor(0,0,0)
