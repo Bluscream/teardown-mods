@@ -4,10 +4,9 @@ end
 
 last_fps = 0
 function lastFPS()
-    fps = getFps()
-    if lastTime == nil or fps < 30 or (GetTime() - lastTime) >= 0.1 then
+    if lastTime == nil or (GetTime() - lastTime) >= 0.1 then
         lastTime = GetTime()
-        last_fps = fps
+        last_fps = getFps()
     end
     return last_fps
 end
