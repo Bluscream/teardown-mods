@@ -5,8 +5,8 @@ end
 last_fps = 0
 function lastFPS()
     if lastTime == nil or (GetTime() - lastTime) >= 0.1 then
-        lastTime = GetTime()
-        last_fps = getFps()
+        local lastTime = GetTime()
+        local last_fps = getFps()
     end
     return last_fps
 end
