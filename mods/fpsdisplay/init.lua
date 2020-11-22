@@ -2,10 +2,9 @@ local function getFps()
     return math.floor(1/GetTimeStep())
 end
 
-local last_fps = 0
 local function lastFPS()
-    if lastTime == nil or (GetTime() - lastTime) >= 0.1 then
-        lastTime = GetTime()
+    if last_time == nil or last_fps == nil or (GetTime() - last_time) >= 0.1 then
+        last_time = GetTime()
         last_fps = getFps()
     end
     return last_fps
